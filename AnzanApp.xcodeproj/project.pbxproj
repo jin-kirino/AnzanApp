@@ -11,6 +11,7 @@
 		FFB5E2BE283BCE28006FE91B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB5E2BD283BCE28006FE91B /* ContentView.swift */; };
 		FFB5E2C0283BCE2A006FE91B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFB5E2BF283BCE2A006FE91B /* Assets.xcassets */; };
 		FFB5E2C3283BCE2A006FE91B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFB5E2C2283BCE2A006FE91B /* Preview Assets.xcassets */; };
+		FFB5E2CB283C8AD9006FE91B /* AnswersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB5E2CA283C8AD9006FE91B /* AnswersView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		FFB5E2BD283BCE28006FE91B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FFB5E2BF283BCE2A006FE91B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFB5E2C2283BCE2A006FE91B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FFB5E2CA283C8AD9006FE91B /* AnswersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				FFB5E2BB283BCE28006FE91B /* AnzanAppApp.swift */,
 				FFB5E2BD283BCE28006FE91B /* ContentView.swift */,
+				FFB5E2CA283C8AD9006FE91B /* AnswersView.swift */,
 				FFB5E2BF283BCE2A006FE91B /* Assets.xcassets */,
 				FFB5E2C1283BCE2A006FE91B /* Preview Content */,
 			);
@@ -159,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFB5E2BE283BCE28006FE91B /* ContentView.swift in Sources */,
+				FFB5E2CB283C8AD9006FE91B /* AnswersView.swift in Sources */,
 				FFB5E2BC283BCE28006FE91B /* AnzanAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
