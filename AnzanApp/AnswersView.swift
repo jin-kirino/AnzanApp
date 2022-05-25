@@ -9,9 +9,12 @@ import SwiftUI
 
 struct AnswersView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+        ZStack {
+            BackgroundView(imageName: "bunbougu_kokuban")
+            Text("正解")
+        }// ZStack
+    }// body
+}// AnswerView
 
 struct AnswersView_Previews: PreviewProvider {
     static var previews: some View {
