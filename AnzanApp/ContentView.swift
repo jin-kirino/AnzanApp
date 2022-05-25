@@ -28,8 +28,9 @@ struct ContentView: View {
                 HStack {
                     Text("\(firstNumber) + \(secondNumber) =")
                         .font(Font.largeTitle)
+                        .frame(width: 220, height: 70)
+                        .background(Color.gray)
                         .padding(.leading, 50.0)
-                        .padding(.bottom, 20.0)
                     TextField("答えは？", text: $inputAnswer)
                         .keyboardType(.numberPad)
                 }
@@ -43,6 +44,8 @@ struct ContentView: View {
                     Text("答える")
                         .font(Font.largeTitle)
                 }// Button
+                .frame(width: 120, height: 70)
+                .background(Color.gray)
             }// VStack
         }// ZStack
 
