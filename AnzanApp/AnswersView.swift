@@ -8,17 +8,29 @@
 import SwiftUI
 
 struct AnswersView: View {
-//    var result:Int = 0
+    let firstNumber: Int
+    let secondNumber: Int
+    let result: Int
+    var judgment: String = "正解"
+
     var body: some View {
         ZStack {
             BackgroundView(imageName: "bunbougu_kokuban")
-            Text("正解")
+            VStack {
+                Text("""
+                    \(firstNumber) + \(secondNumber) = \(result)
+                    答えは\(result)
+                         \(judgment)
+                    """)
+                .foregroundColor(Color.white)
+                .font(.largeTitle)
+            }// VStack
         }// ZStack
     }// body
 }// AnswerView
 
 struct AnswersView_Previews: PreviewProvider {
     static var previews: some View {
-        AnswersView()
+        AnswersView(firstNumber: 0, secondNumber: 0, result: 0)
     }
 }

@@ -49,7 +49,7 @@ struct ContentView: View {
                 .frame(width: 120, height: 70)
                 .background(Color.gray)
                 .sheet(isPresented: $answersView) {
-                    AnswersView()
+                    AnswersView(firstNumber: firstNumber, secondNumber: secondNumber, result: result)
                 }
             }// VStack
         }// ZStack
