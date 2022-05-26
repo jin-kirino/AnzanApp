@@ -41,12 +41,16 @@ struct ContentView: View {
                     firstNumber = Int.random(in: 1...9)
                     secondNumber = Int.random(in: 1...9)
                     result = firstNumber + secondNumber
+                    answersView.toggle()
                 } label: {
                     Text("答える")
                         .font(Font.largeTitle)
                 }// Button
                 .frame(width: 120, height: 70)
                 .background(Color.gray)
+                .sheet(isPresented: $answersView) {
+                    AnswersView()
+                }
             }// VStack
         }// ZStack
 

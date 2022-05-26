@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AnswersView: View {
+//    var result:Int = 0
     var body: some View {
         ZStack {
             BackgroundView(imageName: "bunbougu_kokuban")
