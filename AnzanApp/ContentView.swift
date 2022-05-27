@@ -28,13 +28,13 @@ struct ContentView: View {
                 HStack {
                     Text("\(firstNumber) + \(secondNumber) =")
                         .font(Font.largeTitle)
-                        .frame(width: 180, height: 70)
-                        .background(Color.gray)
-                        .padding(.leading, 50.0)
                     TextField("答えは？", text: $inputAnswer)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .keyboardType(.numberPad)
                 }
+                .frame(width: 220, height: 30)
+                .padding()
+                .background(Color.gray)
 
                 Button {
                     print("タップ")
