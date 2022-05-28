@@ -12,7 +12,16 @@ struct AnswersView: View {
     let secondNumber: Int
     let inputAnswer: Int
     let result: Int
-    var judgment: String = "正解"
+//    var judgment: String = ""
+
+    func judgment(judg: Int) -> String {
+
+        if result == Int(inputAnswer) {
+            return "正解"
+        } else {
+            return "不正解"
+        }
+    }
 
     var body: some View {
         ZStack {
@@ -21,7 +30,7 @@ struct AnswersView: View {
                 Text("""
                     \(firstNumber) + \(secondNumber) = \(inputAnswer)
                     答えは\(result)
-                    \(judgment)
+                    \(judgment(judg: inputAnswer))
                     """)
                 .foregroundColor(Color.white)
                 .font(.largeTitle)
