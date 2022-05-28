@@ -40,9 +40,12 @@ struct ContentView: View {
                 .background(Color.white.opacity(0.7))
 
                 Button {
-                    print("タップ")
-                    result = firstNumber + secondNumber
-                    answersView.toggle()
+                    if Int(inputAnswer) != nil {
+                        result = firstNumber + secondNumber
+                        answersView.toggle()
+                    } else {
+                        showAlert.toggle()
+                    }
                 } label: {
                     Text("答える")
                         .font(Font.largeTitle)
@@ -55,10 +58,11 @@ struct ContentView: View {
                 }) {
                     AnswersView(firstNumber: firstNumber, secondNumber: secondNumber, inputAnswer: Int(inputAnswer)!, result: result)
                 }
+                .alert("答えを入力してください", isPresented: $showAlert) {
+                    Button("OK") {}
+                }// alert
             }// VStack
-        }// ZStack
-
-            .padding()
+        }// ZStackん
     }// body
 }// ContentView
 
