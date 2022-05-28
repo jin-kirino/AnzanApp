@@ -10,13 +10,13 @@ import SwiftUI
 struct AnswersView: View {
     let firstNumber: Int
     let secondNumber: Int
-    let inputAnswer: Int
-    let result: Int
-//    var judgment: String = ""
+    var inputAnswer: Int
+    var result: Int
+//    var judgment: String
+    let soundPlayer = SoundPlayer()
 
     func judgment(judg: Int) -> String {
-
-        if result == Int(inputAnswer) {
+        if result == inputAnswer {
             return "正解"
         } else {
             return "不正解"
@@ -24,13 +24,20 @@ struct AnswersView: View {
     }
 
     var body: some View {
+
+//        if judgment(judg: result) == "正解" {
+//            soundPlayer.correctPlay()
+//        } else {
+//            soundPlayer.incorrectPlay()
+//        }
+
         ZStack {
             BackgroundView(imageName: "bunbougu_kokuban")
             VStack {
                 Text("""
                     \(firstNumber) + \(secondNumber) = \(inputAnswer)
                     答えは\(result)
-                    \(judgment(judg: inputAnswer))
+                    \(judgment(judg: result))
                     """)
                 .foregroundColor(Color.white)
                 .font(.largeTitle)
