@@ -39,7 +39,7 @@ struct ContentView: View {
                         }
                 }
                 // TextとTextFieldを囲って色付け
-                .frame(width: 220, height: 30)
+                .frame(width: 225, height: 30)
                 .padding()
                 .background(Color.white.opacity(0.7))
 
