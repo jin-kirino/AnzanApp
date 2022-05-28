@@ -31,6 +31,9 @@ struct ContentView: View {
                     TextField("答えは？", text: $inputAnswer)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .keyboardType(.numberPad)
+                        .onChange(of: inputAnswer) { newInput in
+                             print("newInput = [\(newInput)")
+                        }
                 }
                 .frame(width: 220, height: 30)
                 .padding()
@@ -38,8 +41,6 @@ struct ContentView: View {
 
                 Button {
                     print("タップ")
-                    firstNumber = Int.random(in: 1...9)
-                    secondNumber = Int.random(in: 1...9)
                     result = firstNumber + secondNumber
                     answersView.toggle()
                 } label: {
@@ -48,8 +49,11 @@ struct ContentView: View {
                 }// Button
                 .frame(width: 120, height: 70)
                 .background(Color.white.opacity(0.7))
-                .sheet(isPresented: $answersView) {
-                    AnswersView(firstNumber: firstNumber, secondNumber: secondNumber, result: result)
+                .sheet(isPresented: $answersView, onDismiss: {
+                    firstNumber = Int.random(in: 1...9)
+                    secondNumber = Int.random(in: 1...9)
+                }) {
+                    AnswersView(firstNumber: firstNumber, secondNumber: secondNumber, inputAnswer: Int(inputAnswer)!, result: result)
                 }
             }// VStack
         }// ZStack
