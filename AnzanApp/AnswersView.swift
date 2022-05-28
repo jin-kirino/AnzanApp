@@ -10,6 +10,7 @@ import SwiftUI
 struct AnswersView: View {
     let firstNumber: Int
     let secondNumber: Int
+    let inputAnswer: Int
     let result: Int
     var judgment: String = "正解"
 
@@ -18,7 +19,7 @@ struct AnswersView: View {
             BackgroundView(imageName: "bunbougu_kokuban")
             VStack {
                 Text("""
-                    \(firstNumber) + \(secondNumber) = \(result)
+                    \(firstNumber) + \(secondNumber) = \(inputAnswer)
                     答えは\(result)
                     \(judgment)
                     """)
@@ -32,6 +33,6 @@ struct AnswersView: View {
 
 struct AnswersView_Previews: PreviewProvider {
     static var previews: some View {
-        AnswersView(firstNumber: 0, secondNumber: 0, result: 0)
+        AnswersView(firstNumber: 0, secondNumber: 0, inputAnswer: 0, result: 0)
     }
 }
