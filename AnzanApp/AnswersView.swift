@@ -20,10 +20,11 @@ struct AnswersView: View {
                 Text("""
                     \(firstNumber) + \(secondNumber) = \(result)
                     答えは\(result)
-                         \(judgment)
+                    \(judgment)
                     """)
                 .foregroundColor(Color.white)
                 .font(.largeTitle)
+                .multilineTextAlignment(TextAlignment.center)
             }// VStack
         }// ZStack
     }// body

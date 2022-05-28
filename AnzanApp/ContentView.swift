@@ -34,7 +34,7 @@ struct ContentView: View {
                 }
                 .frame(width: 220, height: 30)
                 .padding()
-                .background(Color.gray)
+                .background(Color.white.opacity(0.7))
 
                 Button {
                     print("タップ")
@@ -47,7 +47,7 @@ struct ContentView: View {
                         .font(Font.largeTitle)
                 }// Button
                 .frame(width: 120, height: 70)
-                .background(Color.gray)
+                .background(Color.white.opacity(0.7))
                 .sheet(isPresented: $answersView) {
                     AnswersView(firstNumber: firstNumber, secondNumber: secondNumber, result: result)
                 }
