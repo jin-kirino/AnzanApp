@@ -12,7 +12,6 @@ struct AnswersView: View {
     let secondNumber: Int
     var inputAnswer: Int
     var result: Int
-    let soundPlayer = SoundPlayer()
 
     func judgment(judg: Int) -> String {
         if result == inputAnswer {
@@ -23,13 +22,6 @@ struct AnswersView: View {
     }
 
     var body: some View {
-
-//        if judgment(judg: result) == "正解" {
-//            soundPlayer.correctPlay()
-//        } else {
-//            soundPlayer.incorrectPlay()
-//        }
-
         ZStack {
             BackgroundView(imageName: "bunbougu_kokuban")
             VStack {

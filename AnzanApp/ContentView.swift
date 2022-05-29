@@ -20,6 +20,10 @@ struct ContentView: View {
     @State private var answersView: Bool = false
     // アラートの管理
     @State private var showAlert: Bool = false
+    // 音源管理
+    @State private var soundPlayer = SoundPlayer()
+    //
+    @State private var judgment: String = ""
 
     var body: some View {
         ZStack {
@@ -36,18 +40,22 @@ struct ContentView: View {
                         // 変更するたび値変わる
                         .onChange(of: inputAnswer) { newInput in
                              print("newInput = [\(newInput)")
-                        }
-                }
+                        }// .onChenge
+                }// HStack
                 // TextとTextFieldを囲って色付け
                 .frame(width: 225, height: 30)
                 .padding()
                 .background(Color.white.opacity(0.7))
 
                 Button {
-                    result = firstNumber + secondNumber
                     // 数字が入力されたらanswersViewを表示
                     if Int(inputAnswer) != nil {
                         answersView.toggle()
+                        if Int(inputAnswer) == result {
+                            soundPlayer.correctPlay()
+                        } else {
+                            soundPlayer.incorrectPlay()
+                        }
                     } else {
                         // 空欄だったらshpwAlertを表示
                         showAlert.toggle()
@@ -63,6 +71,7 @@ struct ContentView: View {
                 .sheet(isPresented: $answersView, onDismiss: {
                     firstNumber = Int.random(in: 1...9)
                     secondNumber = Int.random(in: 1...9)
+                    result = firstNumber + secondNumber
                     inputAnswer = ""
                 }) {
                     AnswersView(firstNumber: firstNumber, secondNumber: secondNumber, inputAnswer: Int(inputAnswer)!, result: result)
