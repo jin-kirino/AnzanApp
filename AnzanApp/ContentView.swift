@@ -84,4 +84,3 @@ struct ContentView_Previews: PreviewProvider {
 // 最初の計算でもresultを表示させる→どこで足し算させてresultに値を入れる？
 // 音をつける(MyMusic)
 // ↑GudgmentViewを作成する
-// キーボードを毎回表示させる

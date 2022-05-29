@@ -12,7 +12,6 @@ struct AnswersView: View {
     let secondNumber: Int
     var inputAnswer: Int
     var result: Int
-//    var judgment: String
     let soundPlayer = SoundPlayer()
 
     func judgment(judg: Int) -> String {

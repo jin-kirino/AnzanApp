@@ -13,7 +13,6 @@
 		FFB5E2C3283BCE2A006FE91B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFB5E2C2283BCE2A006FE91B /* Preview Assets.xcassets */; };
 		FFB5E2CB283C8AD9006FE91B /* AnswersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB5E2CA283C8AD9006FE91B /* AnswersView.swift */; };
 		FFB5E2CD283D0445006FE91B /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB5E2CC283D0445006FE91B /* BackgroundView.swift */; };
-		FFEFAEAF2842D7D000E30889 /* JudgmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEFAEAE2842D7D000E30889 /* JudgmentView.swift */; };
 		FFEFAEB32842D8DA00E30889 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEFAEB22842D8DA00E30889 /* SoundPlayer.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,7 +24,6 @@
 		FFB5E2C2283BCE2A006FE91B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FFB5E2CA283C8AD9006FE91B /* AnswersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersView.swift; sourceTree = "<group>"; };
 		FFB5E2CC283D0445006FE91B /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
-		FFEFAEAE2842D7D000E30889 /* JudgmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JudgmentView.swift; sourceTree = "<group>"; };
 		FFEFAEB22842D8DA00E30889 /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,7 +59,6 @@
 			children = (
 				FFB5E2BB283BCE28006FE91B /* AnzanAppApp.swift */,
 				FFB5E2BD283BCE28006FE91B /* ContentView.swift */,
-				FFEFAEAE2842D7D000E30889 /* JudgmentView.swift */,
 				FFB5E2CC283D0445006FE91B /* BackgroundView.swift */,
 				FFEFAEB22842D8DA00E30889 /* SoundPlayer.swift */,
 				FFB5E2CA283C8AD9006FE91B /* AnswersView.swift */,
@@ -172,7 +169,6 @@
 			files = (
 				FFB5E2BE283BCE28006FE91B /* ContentView.swift in Sources */,
 				FFB5E2CB283C8AD9006FE91B /* AnswersView.swift in Sources */,
-				FFEFAEAF2842D7D000E30889 /* JudgmentView.swift in Sources */,
 				FFB5E2CD283D0445006FE91B /* BackgroundView.swift in Sources */,
 				FFEFAEB32842D8DA00E30889 /* SoundPlayer.swift in Sources */,
 				FFB5E2BC283BCE28006FE91B /* AnzanAppApp.swift in Sources */,
