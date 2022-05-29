@@ -63,6 +63,7 @@ struct ContentView: View {
                 .sheet(isPresented: $answersView, onDismiss: {
                     firstNumber = Int.random(in: 1...9)
                     secondNumber = Int.random(in: 1...9)
+                    inputAnswer = ""
                 }) {
                     AnswersView(firstNumber: firstNumber, secondNumber: secondNumber, inputAnswer: Int(inputAnswer)!, result: result)
                 }// sheet
@@ -83,6 +84,5 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-// 最初の計算でもresultを表示させる→どこで足し算させてresultに値を入れる？
 // 音をつける(MyMusic)
-// ↑GudgmentViewを作成する
+// sheetを閉じたら空文字にする
