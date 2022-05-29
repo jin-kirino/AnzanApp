@@ -66,7 +66,9 @@ struct ContentView: View {
                 }) {
                     AnswersView(firstNumber: firstNumber, secondNumber: secondNumber, inputAnswer: Int(inputAnswer)!, result: result)
                 }// sheet
-                .onAppear()
+                .onAppear {
+                    result = firstNumber + secondNumber
+                }
                 .alert("答えを入力してください", isPresented: $showAlert) {
                     Button("OK") {}
                 }// alert
