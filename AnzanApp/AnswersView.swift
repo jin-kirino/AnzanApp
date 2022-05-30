@@ -37,6 +37,7 @@ struct AnswersView: View {
             }// VStack
         }// ZStack
         .onAppear(perform: {
+//            result = firstNumber + secondNumber
             if inputAnswer == result {
                 soundPlayer.correctPlay()
             } else {
