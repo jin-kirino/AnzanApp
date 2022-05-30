@@ -51,11 +51,6 @@ struct ContentView: View {
                     // 数字が入力されたらanswersViewを表示
                     if Int(inputAnswer) != nil {
                         answersView.toggle()
-                        if Int(inputAnswer) == result {
-                            soundPlayer.correctPlay()
-                        } else {
-                            soundPlayer.incorrectPlay()
-                        }
                     } else {
                         // 空欄だったらshpwAlertを表示
                         showAlert.toggle()

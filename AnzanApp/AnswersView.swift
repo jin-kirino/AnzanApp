@@ -12,6 +12,7 @@ struct AnswersView: View {
     let secondNumber: Int
     var inputAnswer: Int
     var result: Int
+    let soundPlayer = SoundPlayer()
 
     func judgment(judg: Int) -> String {
         if result == inputAnswer {
@@ -35,6 +36,13 @@ struct AnswersView: View {
                 .multilineTextAlignment(TextAlignment.center)
             }// VStack
         }// ZStack
+        .onAppear(perform: {
+            if inputAnswer == result {
+                soundPlayer.correctPlay()
+            } else {
+                soundPlayer.incorrectPlay()
+            }
+        })
     }// body
 }// AnswerView
 
