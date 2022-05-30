@@ -11,11 +11,10 @@ struct AnswersView: View {
     let firstNumber: Int
     let secondNumber: Int
     var inputAnswer: Int
-    var result: Int
     let soundPlayer = SoundPlayer()
 
     func judgment(judg: Int) -> String {
-        if result == inputAnswer {
+        if firstNumber + secondNumber == inputAnswer {
             return "正解"
         } else {
             return "不正解"
@@ -28,8 +27,8 @@ struct AnswersView: View {
             VStack {
                 Text("""
                     \(firstNumber) + \(secondNumber) = \(inputAnswer)
-                    答えは\(result)
-                    \(judgment(judg: result))
+                    答えは\(firstNumber + secondNumber)
+                    \(judgment(judg: firstNumber + secondNumber))
                     """)
                 .foregroundColor(Color.white)
                 .font(.largeTitle)
@@ -37,18 +36,17 @@ struct AnswersView: View {
             }// VStack
         }// ZStack
         .onAppear(perform: {
-//            result = firstNumber + secondNumber
-            if inputAnswer == result {
+            if inputAnswer == firstNumber + secondNumber {
                 soundPlayer.correctPlay()
             } else {
                 soundPlayer.incorrectPlay()
             }
-        })
+        })// .onAppear
     }// body
 }// AnswerView
 
 struct AnswersView_Previews: PreviewProvider {
     static var previews: some View {
-        AnswersView(firstNumber: 0, secondNumber: 0, inputAnswer: 0, result: 0)
+        AnswersView(firstNumber: 0, secondNumber: 0, inputAnswer: 0)
     }
 }

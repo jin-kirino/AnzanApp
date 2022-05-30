@@ -15,7 +15,7 @@ struct ContentView: View {
     // 2つ目の数字
     @State private var secondNumber: Int = Int.random(in: 1...9)
     // 計算結果
-    @State private var result: Int = 0
+//    @State private var result: Int = 0
     // 答え合わせのシート
     @State private var answersView: Bool = false
     // アラートの管理
@@ -66,14 +66,10 @@ struct ContentView: View {
                 .sheet(isPresented: $answersView, onDismiss: {
                     firstNumber = Int.random(in: 1...9)
                     secondNumber = Int.random(in: 1...9)
-                    result = firstNumber + secondNumber
                     inputAnswer = ""
                 }) {
-                    AnswersView(firstNumber: firstNumber, secondNumber: secondNumber, inputAnswer: Int(inputAnswer)!, result: result)
+                    AnswersView(firstNumber: firstNumber, secondNumber: secondNumber, inputAnswer: Int(inputAnswer)!)
                 }// sheet
-                .onAppear(perform: {
-                    result = firstNumber + secondNumber
-                })
                 .alert("答えを入力してください", isPresented: $showAlert) {
                     Button("OK") {}
                 }// alert
