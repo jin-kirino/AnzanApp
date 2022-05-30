@@ -22,8 +22,6 @@ struct ContentView: View {
     @State private var showAlert: Bool = false
     // 音源管理
     @State private var soundPlayer = SoundPlayer()
-    //
-    @State private var judgment: String = ""
 
     var body: some View {
         ZStack {
@@ -68,7 +66,7 @@ struct ContentView: View {
                     secondNumber = Int.random(in: 1...9)
                     inputAnswer = ""
                 }) {
-                    AnswersView(firstNumber: firstNumber, secondNumber: secondNumber, inputAnswer: Int(inputAnswer)!)
+                    AnswersView(firstNumber: firstNumber, secondNumber: secondNumber, inputAnswer: Int(inputAnswer)!, result: firstNumber + secondNumber)
                 }// sheet
                 .alert("答えを入力してください", isPresented: $showAlert) {
                     Button("OK") {}
@@ -84,5 +82,6 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-// 音をつける(MyMusic)
-// sheetを閉じたら空文字にする
+// 計算の関数作成
+// 引数を２つ→Intでresult
+// 
