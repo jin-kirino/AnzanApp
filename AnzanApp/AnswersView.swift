@@ -11,20 +11,10 @@ struct AnswersView: View {
     let firstNumber: Int
     let secondNumber: Int
     var inputAnswer: Int
-    var result: Int
-    let soundPlayer = SoundPlayer()
 
-    func judgment(first: Int, second: Int, inputAnswer: Int) -> String {
-        let result: Int = first + second
-        var judg: String = ""
-
-        if inputAnswer == result {
-            judg = "正解"
-        } else {
-            judg = "不正解"
-        }
-        return judg
-    }// judgment
+    private let soundPlayer = SoundPlayer()
+    @State private var resultNumber: Int = 0
+    @State private var resultJudg: String = ""
 
     var body: some View {
         ZStack {
@@ -32,8 +22,8 @@ struct AnswersView: View {
             VStack {
                 Text("""
                     \(firstNumber) + \(secondNumber) = \(inputAnswer)
-                    答えは\(result)
-                    \(judgment(first: firstNumber, second: secondNumber, inputAnswer: inputAnswer))
+                    答えは\(resultNumber)
+                    \(resultJudg)
                     """)
                 .foregroundColor(Color.white)
                 .font(.largeTitle)
@@ -41,10 +31,13 @@ struct AnswersView: View {
             }// VStack
         }// ZStack
         .onAppear(perform: {
-            if inputAnswer == result {
+            resultNumber = firstNumber + secondNumber
+            if inputAnswer == resultNumber {
                 soundPlayer.correctPlay()
+                resultJudg = "正解"
             } else {
                 soundPlayer.incorrectPlay()
+                resultJudg = "不正解"
             }
         })// .onAppear
     }// body
@@ -52,6 +45,6 @@ struct AnswersView: View {
 
 struct AnswersView_Previews: PreviewProvider {
     static var previews: some View {
-        AnswersView(firstNumber: 0, secondNumber: 0, inputAnswer: 0, result: 0)
+        AnswersView(firstNumber: 0, secondNumber: 0, inputAnswer: 0)
     }
 }
